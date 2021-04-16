@@ -1,0 +1,39 @@
+.App {
+  display: grid;
+  height: calc(100vh);
+  background-color: black;
+
+  .bubble {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    transform: scale(0);
+    filter: blur(3px);
+  }
+
+  span {
+    color: white;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bubble {
+    animation: NewBubble 0.7s ease-out;
+  }
+}
+
+@keyframes NewBubble {
+  from {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(7);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
